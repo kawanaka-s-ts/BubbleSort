@@ -4,7 +4,7 @@ class BubbleSort
     # countは繰り返した回数
     # countに0を代入
     count = 0
-    # indexの数値が要素数よりも小さい間、処理を繰り返す
+    # countの数値が要素数よりも小さい間、処理を繰り返す
     while count < numeric_array.size
       # indexに0を代入
       index = 0
