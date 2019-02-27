@@ -1,13 +1,20 @@
 require "spec_helper"
 require "bubble_sort"
 
-numbers = [*1..10].sort_by{rand}
-
 describe BubbleSort do
-  describe "#asc_order" do
+  describe "#change_order" do
     it "要素を昇順に並べ替えた配列を返す" do
       bubble_sort = BubbleSort.new
-      expect(bubble_sort.asc_order(numbers)).to eq [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+      numbers = [*1..10].shuffle
+      pattern = 1
+      expect(bubble_sort.change_order(numbers, pattern)).to eq [*1..10]
+    end
+
+    it "要素を降順に並べ替えた配列を返す" do
+      bubble_sort = BubbleSort.new
+      numbers = [*1..10].shuffle
+      pattern = -1
+      expect(bubble_sort.change_order(numbers, pattern)).to eq [*1..10].reverse
     end
   end
 end

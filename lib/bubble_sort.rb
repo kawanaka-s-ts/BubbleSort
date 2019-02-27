@@ -1,6 +1,6 @@
 class BubbleSort
-  # asc_orderメソッドここから
-  def asc_order(numbers)
+  # change_orderメソッドここから
+  def change_order(numbers, pattern)
     # countは繰り返した回数
     # countに0を代入
     count = 0
@@ -12,9 +12,9 @@ class BubbleSort
       while index < numbers.size - 1
         # jにindex + 1を代入
         j = index + 1
-        # 隣り合った要素で大小を比較して、右の要素の方が小さい時
-        if numbers[index] > numbers[j]
-          # 要素を入れ替える
+        # UFO演算子を使って左辺と右辺を比較する
+        # 返された値とpatternを比較して、等しい時に処理を行う
+        if(numbers[index] <=> numbers[j]) == pattern
           # hold_valueにnumbers[index]の値を保持させる
           hold_value = numbers[index]
           # numbers[index]にnumbers[j]の値を代入
@@ -31,8 +31,8 @@ class BubbleSort
       count += 1
     # whileここまで
     end
-    # 要素を昇順に並べ替えた配列を返す
+    # 要素を並べ替えた配列を返す
     numbers
-  # asc_orderメソッドここまで
+  # change_orderメソッドここまで
   end
 end
