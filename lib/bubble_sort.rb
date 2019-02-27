@@ -13,7 +13,8 @@ class BubbleSort
         # 隣り合った要素で大小を比較して、右の要素の方が小さい時
         if numbers[index] > numbers[index + 1]
           # 要素を入れ替える
-          numbers[index], numbers[index + 1] = numbers[index + 1], numbers[index]
+          numbers[index], numbers[index + 1] =
+          numbers[index + 1], numbers[index]
         # ifここまで
         end
         # indexを1増やす
