@@ -1,6 +1,6 @@
 class BubbleSort
-  # ascending_orderメソッドここから
-  def ascending_order(numbers)
+  # asc_orderメソッドここから
+  def asc_order(numbers)
     # countは繰り返した回数
     # countに0を代入
     count = 0
@@ -27,6 +27,6 @@ class BubbleSort
     end
     # 要素を昇順に並べ替えた配列を返す
     numbers
-  # ascending_orderメソッドここまで
+  # asc_orderメソッドここまで
   end
 end
