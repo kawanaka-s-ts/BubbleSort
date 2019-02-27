@@ -10,15 +10,17 @@ class BubbleSort
       index = 0
       # indexの数値が要素数-1より小さい間、処理を繰り返す
       while index < numbers.size - 1
+        # jにindex + 1を代入
+        j = index + 1
         # 隣り合った要素で大小を比較して、右の要素の方が小さい時
-        if numbers[index] > numbers[index + 1]
+        if numbers[index] > numbers[j]
           # 要素を入れ替える
           # hold_valueにnumbers[index]の値を保持させる
           hold_value = numbers[index]
-          # numbers[index]にnumbers[index + 1]の値を代入
-          numbers[index] = numbers[index + 1]
-          # 保持させておいた値を、numbers[index + 1]に代入
-          numbers[index + 1] = hold_value
+          # numbers[index]にnumbers[j]の値を代入
+          numbers[index] = numbers[j]
+          # 保持させておいた値を、numbers[j]に代入
+          numbers[j] = hold_value
         # ifここまで
         end
         # indexを1増やす
