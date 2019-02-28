@@ -1,6 +1,6 @@
 class BubbleSort
-  # change_orderメソッドここから
-  def change_order(numbers, pattern)
+  # sortメソッドここから
+  def sort(numbers, pattern)
     # countは繰り返した回数
     # countに0を代入
     count = 0
@@ -33,6 +33,24 @@ class BubbleSort
     end
     # 要素を並べ替えた配列を返す
     numbers
-  # change_orderメソッドここまで
+  # sortメソッドここまで
+  end
+
+  # asc_orderメソッドここから
+  def asc_order(numbers)
+    # patternに1を代入（昇順）
+    pattern = 1
+    # sortメソッド呼び出し
+    sort(numbers, pattern)
+    # 並べ替えた配列を返す
+  end
+
+  # desc_orderメソッドはここから
+  def desc_order(numbers)
+    # patternに-1を代入（降順）
+    pattern = -1
+    # sortメソッド呼び出し
+    sort(numbers, pattern)
+    # 並べ替えた配列を返す
   end
 end
