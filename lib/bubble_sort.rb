@@ -1,6 +1,6 @@
 class BubbleSort
   # sortメソッドここから
-  def sort(numbers, pattern)
+  def sort(numbers, order)
     # countは繰り返した回数
     # countに0を代入
     count = 0
@@ -14,7 +14,7 @@ class BubbleSort
         j = index + 1
         # UFO演算子を使って左辺と右辺を比較する
         # 返された値とpatternを比較して、等しい時に処理を行う
-        if(numbers[index] <=> numbers[j]) == pattern
+        if(numbers[index] <=> numbers[j]) == order
           # hold_valueにnumbers[index]の値を保持させる
           hold_value = numbers[index]
           # numbers[index]にnumbers[j]の値を代入
@@ -38,19 +38,13 @@ class BubbleSort
 
   # asc_orderメソッドここから
   def asc_order(numbers)
-    # patternに1を代入（昇順）
-    pattern = 1
     # sortメソッド呼び出し
-    sort(numbers, pattern)
-    # 並べ替えた配列を返す
+    sort(numbers, 1)
   end
 
   # desc_orderメソッドはここから
   def desc_order(numbers)
-    # patternに-1を代入（降順）
-    pattern = -1
     # sortメソッド呼び出し
-    sort(numbers, pattern)
-    # 並べ替えた配列を返す
+    sort(numbers, -1)
   end
 end
